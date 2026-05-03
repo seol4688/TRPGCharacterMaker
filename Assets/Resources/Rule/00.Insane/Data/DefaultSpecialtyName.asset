@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fe8e1d3505d1749b459f1cf1f4f95f, type: 3}
+  m_Name: DefaultSpecialtyName
+  m_EditorClassIdentifier: 
+  areaNames:
+  - "\uD3ED\uB825"
+  - "\uC815\uC11C"
+  - "\uC9C0\uAC01"
+  - "\uAE30\uC220"
+  - "\uC9C0\uC2DD"
+  - "\uAD34\uC774"
+  defaultSkillNames:
+  - "\uC18C\uAC01"
+  - "\uACE0\uBB38"
+  - "\uD3EC\uBC15"
+  - "\uD611\uBC15"
+  - "\uD30C\uAD34"
+  - "\uAD6C\uD0C0"
+  - "\uC808\uB2E8"
+  - "\uCC0C\uB974\uAE30"
+  - "\uC0AC\uACA9"
+  - "\uC804\uC7C1"
+  - "\uB9E4\uC7A5"
+  - "\uC5F0\uC2EC"
+  - "\uAE30\uC068"
+  - "\uAC71\uC815"
+  - "\uBD80\uB044\uB7EC\uC6C0"
+  - "\uC6C3\uC74C"
+  - "\uC778\uB0B4"
+  - "\uB180\uB78C"
+  - "\uB178\uC5EC\uC6C0"
+  - "\uC6D0\uD55C"
+  - "\uC2AC\uD514"
+  - "\uCE5C\uC560"
+  - "\uACE0\uD1B5"
+  - "\uAD00\uB2A5"
+  - "\uCD09\uAC10"
+  - "\uB0C4\uC0C8"
+  - "\uB9DB"
+  - "\uC18C\uB9AC"
+  - "\uD48D\uACBD"
+  - "\uCD94\uC801"
+  - "\uC608\uC220"
+  - "\uC81C\uC721\uAC10"
+  - "\uADF8\uB298"
+  - "\uBD84\uD574"
+  - "\uC804\uC790\uAE30\uAE30"
+  - "\uC815\uB9AC"
+  - "\uC57D\uD488"
+  - "\uD6A8\uC728"
+  - "\uBBF8\uB514\uC5B4"
+  - "\uCE74\uBA54\uB77C"
+  - "\uD0C8\uAC83"
+  - "\uAE30\uACC4"
+  - "\uD568\uC815"
+  - "\uBCD1\uAE30"
+  - "\uBB3C\uB9AC\uD559"
+  - "\uC218\uD559"
+  - "\uD654\uD559"
+  - "\uC0DD\uBB3C\uD559"
+  - "\uC758\uD559"
+  - "\uAD50\uC591"
+  - "\uC778\uB958\uD559"
+  - "\uC5ED\uC0AC"
+  - "\uBBFC\uC18D\uD559"
+  - "\uACE0\uACE0\uD559"
+  - "\uCC9C\uBB38\uD559"
+  - "\uC2DC\uAC04"
+  - "\uD63C\uB3C8"
+  - "\uC2EC\uD574"
+  - "\uC8FD\uC74C"
+  - "\uC601\uD63C"
+  - "\uB9C8\uC220"
+  - "\uC554\uD751"
+  - "\uC885\uB9D0"
+  - "\uAFC8"
+  - "\uC9C0\uC800"
+  - "\uC6B0\uC8FC"

@@ -1,0 +1,1374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4ea7a2ae950014e86ec56fba3cabd6, type: 3}
+  m_Name: AbilityDatabase_Official
+  m_EditorClassIdentifier: 
+  abilities:
+  - name: "\uAE30\uBCF8\uACF5\uACA9"
+    type: 0
+    designatedSpecialtyType: 5
+    designatedEntries: []
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD574\uC11C \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4.  \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0, \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74 1D6\uC810 \uB300\uBBF8\uC9C0."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC804\uC7A5\uC774\uB3D9"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC9C0\uC6D0\uD589\uB3D9. \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC0AC\uC6A9\uD558\uBA74
+      \uC804\uD22C\uC5D0 \uCC38\uAC00\uD55C \uCE90\uB9AD\uD130 \uC804\uC6D0\uC740
+      \uB2E4\uC74C \uB77C\uC6B4\uB4DC\uC758 [\uB77C\uC6B4\uB4DC \uC2DC\uC791]\uC5D0
+      \uD50C\uB86F\uC744 \uD55C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD2B8\uB9AD"
+    type: 0
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uAE30\uC220"
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0, \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74 \uBAA9\uD45C\uC5D0\uAC8C
+      2\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uC774\uB54C \uBAA9\uD45C\uB294
+      \uD68C\uD53C\uD310\uC815\uC5D0 -2\uC758 \uC218\uC815\uC744 \uC801\uC6A9\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAC15\uD0C0"
+    type: 0
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uD3ED\uB825"
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uC774\uB54C \uC790\uC2E0\uC758 \uC18D\uB3C4 \uC218\uCE58\uB9CC\uD07C
+      \uBA85\uC911\uD310\uC815\uC5D0 \uB9C8\uC774\uB108\uC2A4 \uC218\uC815\uC744
+      \uC801\uC6A9\uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0,
+      \uBAA9\uD45C\uAC00 \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74
+      \uBAA9\uD45C\uC5D0\uAC8C 1d6 + \uC790\uC2E0\uC758 \uC18D\uB3C4 \uB9CC\uD07C\uC758
+      \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC800\uACA9"
+    type: 0
+    designatedSpecialtyType: 2
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uAE30\uC220"
+    - isAreaEntry: 0
+      value: "\uC0AC\uACA9"
+    effect: "\uBAB9 1\uAC1C\uCCB4\uB97C \uBAA9\uD45C\uB85C \uC120\uD0DD\uD558\uC5EC
+      \uBA85\uC911\uD310\uC815\uC744 \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774
+      \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC5D0\uAC8C 2d6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB09C\uB3D9"
+    type: 0
+    designatedSpecialtyType: 2
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uD3ED\uB825"
+    - isAreaEntry: 0
+      value: "\uBCD1\uAE30"
+    effect: "\uB2F9\uC2E0\uC774 \uACF5\uAC1C\uD55C \u3010\uAD11\uAE30\u3011\uC758
+      \uC218\uB9CC\uD07C \uBAA9\uD45C(\uC5D0\uB108\uBBF8\uC758 \uACBD\uC6B0 1D6\uBA85\uAE4C\uC9C0
+      \uC120\uD0DD\uD55C\uB2E4)\uB97C \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uB294
+      \uAC01\uC790 \uD68C\uD53C\uD310\uC815\uC744 \uD55C\uB2E4. \uD68C\uD53C\uD310\uC815\uC5D0
+      \uC2E4\uD328\uD55C \uBAA9\uD45C\uC5D0\uAC8C 1D6-2\uC810\uC758 \uB300\uBBF8\uC9C0(\uCD5C\uC800
+      0\uC810)\uB97C \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBD09\uC778"
+    type: 0
+    designatedSpecialtyType: 4
+    designatedEntries: []
+    effect: "\uC6D0\uD558\uB294 \uB9CC\uD07C \uBAA9\uD45C\uB97C \uC120\uD0DD\uD55C\uB2E4.
+      \uAD34\uC774 \uBD84\uC57C\uC5D0\uC11C \uBB34\uC791\uC704\uB85C \uC9C0\uC815\uD2B9\uAE30\uB97C
+      \uD558\uB098 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744 \uD55C\uB2E4.
+      \uBA85\uC911\uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB97C
+      \uC0AC\uC6A9\uD55C \uC790\uC758 \uC774\uC131\uCE58\uAC00 1\uC810 \uAC10\uC18C\uD55C\uB2E4.
+      \uBAA9\uD45C\uB294 \uAC01\uC790 \uD68C\uD53C\uD310\uC815\uC744 \uD574\uC11C
+      \uC2E4\uD328\uD558\uBA74 \uADF8 \uB77C\uC6B4\uB4DC \uB3D9\uC548 \uACF5\uACA9\uACFC
+      \uD68C\uD53C\uD310\uC815\uC744 \uD560 \uC218 \uC5C6\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC18C\uD658"
+    type: 0
+    designatedSpecialtyType: 4
+    designatedEntries: []
+    effect: "\uBAA9\uD45C\uB97C 1\uBA85 \uC120\uD0DD\uD55C\uB2E4.\uAD34\uC774 \uBD84\uC57C\uC5D0\uC11C
+      \uBB34\uC791\uC704\uB85C \uC9C0\uC815\uD2B9\uAE30\uB97C \uD558\uB098 \uC120\uD0DD\uD558\uC5EC
+      \uBA85\uC911\uD310\uC815\uC744 \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC0AC\uC6A9\uD55C
+      \uC790\uC758 \u3010\uC774\uC131\uCE58\u3011\uAC00 1\uC810 \uAC10\uC18C\uD55C\uB2E4.
+      \uBAA9\uD45C\uB294 -3\uC758 \uC218\uC815\uC744 \uC801\uC6A9\uD558\uC5EC \uD68C\uD53C\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBAA9\uD45C\uAC00 \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74
+      \uBAA9\uD45C\uC5D0\uAC8C 2D6\uC810\uC758 \uB300\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC5F0\uACA9"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uD3ED\uB825"
+    effect: "\uB2F9\uC2E0\uC774 \uACF5\uACA9\uD588\uC744 \uB54C, \uACF5\uACA9 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC131\uACF5\uD588\uB2E4\uBA74 \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uACF5\uACA9 \uBAA9\uD45C\uB294 \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758
+      \uC9C0\uC815\uD2B9\uAE30\uB85C \uD55C \uBC88 \uB354 \uD68C\uD53C\uD310\uC815(\uD50C\uB86F\uCE58\uC640
+      \uC0C1\uAD00\uC5C6\uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uC9C0\uC815\uD2B9\uAE30\uB85C
+      \uD310\uC815)\uC744 \uD574\uC57C \uD55C\uB2E4. \uC774 \uD68C\uD53C\uD310\uC815\uC5D0
+      \uC2E4\uD328\uD558\uBA74 \uACF5\uACA9\uC774 \uBA85\uC911\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uCC29\uAC01"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC815\uC11C"
+    effect: "\uB2F9\uC2E0\uC774 \u3010\uAD11\uAE30\u3011\uB97C \uD68D\uB4DD\uD588\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uB2F9\uC2E0\uC774 \uAC00\uC9C0\uACE0 \uC788\uB294
+      \u3010\uAD11\uAE30\u3011\uB97C \uC6D0\uD558\uB294 \uB9CC\uD07C \uC120\uD0DD\uD558\uC5EC
+      \uB371\uC5D0 \uB418\uB3CC\uB9AC\uACE0, \uB2E4\uC2DC \uC11E\uB294\uB2E4. \uADF8\uB9AC\uACE0
+      \uB418\uB3CC\uB9B0 \u3010\uAD11\uAE30\u3011\uC640 \uAC19\uC740 \uC218\uB9CC\uD07C
+      \uC0C8\uB85C\uC6B4 \u3010\uAD11\uAE30\u3011\uB97C \uC5BB\uB294\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC720\uD639"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC815\uC11C"
+    effect: "\uAC10\uC815\uD310\uC815\uC5D0 \uC131\uACF5\uD588\uC744 \uB54C \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uAC10\uC815\uD310\uC815\uC758 \uBAA9\uD45C\uB294 \uC774
+      \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uC9C0\uC815\uD2B9\uAE30\uB85C \uD310\uC815\uC744
+      \uD574\uC57C \uD55C\uB2E4. \uD574\uB2F9 \uD310\uC815\uC774 \uC2E4\uD328\uD55C
+      \uACBD\uC6B0, \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uC0AC\uC6A9\uC790\uB294
+      \uC790\uC2E0\uC5D0 \uB300\uD574 \uAC10\uC815\uD310\uC815\uC758 \uBAA9\uD45C\uAC00
+      \uD68D\uB4DD\uD558\uB294 \u3010\uAC10\uC815\u3011\uC758 \uC885\uB958\uB098
+      \uC18D\uC131\uC744 \uB9C8\uC74C\uB300\uB85C \uACB0\uC815\uD558\uBA70, \uB610\uD55C
+      \uBAA9\uD45C\uC758 \u3010\uAC70\uCC98\u3011\uB098 \uBAA9\uD45C\uAC00 \uAC00\uC9C4
+      \uC544\uC774\uD15C 1\uAC1C\uB97C \uAC15\uD0C8\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC815\uC2E0\uBD84\uC11D"
+    type: 1
+    designatedSpecialtyType: 2
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC815\uC11C"
+    - isAreaEntry: 0
+      value: "\uC758\uD559"
+    effect: "\uB2F9\uC2E0\uC774 \uC870\uC0AC\uD310\uC815\uC774\uB098 \uAC10\uC815\uD310\uC815\uC5D0
+      \uC131\uACF5\uD588\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC870\uC0AC\uD310\uC815\uC774\uB098
+      \uAC10\uC815\uD310\uC815\uC758 \uBAA9\uD45C\uAC00 1\uBA85\uC744 \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758
+      \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC758 \u3010\uC815\uC2E0\uC0C1\uD0DC\u3011\uB97C
+      \uC6D0\uD558\uB294 \uB9CC\uD07C \uD68D\uB4DD\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC9D0\uC791"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uAC01"
+    effect: "\uB204\uAD70\uAC00\uAC00 \u3010\uC815\uBCF4\u3011\uB97C \uD68D\uB4DD\uD588\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uADF8 \uCE90\uB9AD\uD130\uAC00 \uD68D\uB4DD\uD55C
+      \u3010\uC815\uBCF4\u3011\uB97C \uB2F9\uC2E0\uB3C4 \uD68D\uB4DD\uD560 \uC218
+      \uC788\uB2E4. \uC774 \uD6A8\uACFC\uB294 \uC7A5\uBA74\uC5D0 \uB4F1\uC7A5\uD558\uC9C0
+      \uC54A\uB354\uB77C\uB3C4 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC704\uD5D8\uAC10\uC9C0"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uAC01"
+    effect: "\uC804\uD22C \uC911 \uB2F9\uC2E0\uC774 \uBC84\uD305\uC5D0 \uB9D0\uB824\uB4E4\uC5C8\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uBC84\uD305\uC73C\uB85C \uC778\uD55C \uB370\uBBF8\uC9C0\uB97C
+      \uBB34\uD6A8\uB85C \uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAC10\uC2F8\uAE30"
+    type: 1
+    designatedSpecialtyType: 2
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uAC01"
+    - isAreaEntry: 0
+      value: "\uCE5C\uC560"
+    effect: "\uB2F9\uC2E0\uC774 \uD50C\uB7EC\uC2A4 \u3010\uAC10\uC815\u3011\uC744
+      \uAC00\uC9C4 \uCE90\uB9AD\uD130\uAC00 \uB370\uBBF8\uC9C0\uB97C \uC785\uC5C8\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uADF8 \uB370\uBBF8\uC9C0\uB97C 1D6\uC810 \uC904\uC774\uACE0,
+      \uB2F9\uC2E0\uC774 \uB300\uC2E0 \uBC1B\uC744 \uC218 \uC788\uB2E4. \uB2E8, \uC774
+      \uD6A8\uACFC\uB85C \uB370\uBBF8\uC9C0\uB97C 0 \uC774\uD558\uB85C \uB9CC\uB4E4
+      \uC218\uB294 \uC5C6\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC804\uACA9\uBD84\uC11D"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uAE30\uC220"
+    effect: "\uB2F9\uC2E0\uC774 \uB204\uAD70\uAC00\uC758 \u3010\uAC70\uCC98\u3011\uB97C
+      \uD68D\uB4DD\uD588\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uADF8 \u3010\uAC70\uCC98\u3011\uC758
+      \uC18C\uC720\uC8FC\uC5D0\uAC8C \uC804\uD22C\uB97C \uAC78 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBCF4\uBCF5"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uC2DD"
+    effect: "\uB2F9\uC2E0\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC5C8\uC744 \uB54C
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uB2F9\uC2E0\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uD78C \uCE90\uB9AD\uD130 \uCD1D 1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4.
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC5D0\uAC8C
+      1\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uBAA9\uD45C\uB294
+      \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uC9C0\uC815\uD2B9\uAE30\uB85C \uD310\uC815\uC744
+      \uD560 \uC218 \uC788\uB2E4. \uADF8 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74
+      \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uD6A8\uACFC\uB97C \uBB34\uD6A8\uB85C
+      \uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC5F0\uAD6C"
+    type: 1
+    designatedSpecialtyType: 1
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uC2DD"
+    effect: "\uB2F9\uC2E0\uC774 \uC7A5\uBA74 \uD50C\uB808\uC774\uC5B4\uC778 \uB4DC\uB77C\uB9C8
+      \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uB2F9\uC2E0\uC774
+      \u3010\uBE44\uBC00\u3011\uC744 \uD68D\uB4DD\uD55C \uCE90\uB9AD\uD130 1\uBA85\uC744
+      \uBAA9\uD45C\uB85C \uC120\uD0DD\uD558\uC5EC \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC744
+      \uD55C\uB2E4. \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC758 \u3010\uAC70\uCC98\u3011\uB97C
+      \uD68D\uB4DD\uD55C\uB2E4. \uB610\uD55C, \uADF8 \uD6C4 \uC804\uD22C \uC911\uC5D0
+      \uBAA9\uD45C\uAC00 \uB2F9\uC2E0\uACFC \uAC19\uC740 \uC18D\uB3C4\uC5D0 \uC788\uB2E4\uBA74
+      \uBAA9\uD45C\uB294 \uD68C\uD53C\uD310\uC815\uC744 \uD560 \uC218 \uC5C6\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAC1C\uBC1C"
+    type: 1
+    designatedSpecialtyType: 2
+    designatedEntries:
+    - isAreaEntry: 1
+      value: "\uC9C0\uC2DD"
+    - isAreaEntry: 0
+      value: "\uB9C8\uC220"
+    effect: "\uB2F9\uC2E0\uC774 \uC7A5\uBA74 \uD50C\uB808\uC774\uC5B4\uC778 \uB4DC\uB77C\uB9C8
+      \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \u3010\uC774\uC131\uCE58\u3011\uB098
+      \u3010\uC0DD\uBA85\uB825\u3011 1\uC810\uC744 \uC18C\uBE44\uD558\uACE0 \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uC544\uC774\uD15C\uC744 \uD558\uB098
+      \uD68D\uB4DD\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD0C4\uC6D0"
+    type: 1
+    designatedSpecialtyType: 4
+    designatedEntries: []
+    effect: "\uBA54\uC778 \uD398\uC774\uC988\uC5D0\uC11C \uC7A5\uBA74\uACFC \uC7A5\uBA74\uC758
+      \uC0AC\uC774\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uAD34\uC774 \uBD84\uC57C\uC5D0\uC11C
+      \uBB34\uC791\uC704\uB85C \uC9C0\uC815\uD2B9\uAE30\uB97C \uD558\uB098 \uC120\uD0DD\uD558\uC5EC
+      \uD310\uC815\uD55C\uB2E4. \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uC774
+      \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC0AC\uC6A9\uD55C \uC790\uC758 \u3010\uC774\uC131\uCE58\u3011\uAC00
+      1\uC810 \uAC10\uC18C\uD558\uACE0, \uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC744 \uCD94\uAC00\uB85C
+      \uD55C \uBC88 \uB354 \uD560 \uC218 \uC788\uB2E4. \uADF8 \uC7A5\uBA74\uC5D0\uC11C
+      \uC2DC\uB3C4\uD558\uB294 \uD310\uC815\uC5D0\uB294 +1\uC758 \uC218\uC815\uC744
+      \uC801\uC6A9\uD55C\uB2E4. \uC774 \uD6A8\uACFC\uB294 \uD55C \uC138\uC158\uC5D0
+      1\uD68C\uB9CC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAC15\uAC74\uD568"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\u3010\uC0DD\uBA85\uB825\u3011 \uCD5C\uB300\uCE58\uAC00 2\uC810 \uC99D\uAC00\uD55C\uB2E4.
+      \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB294 \uB2E4\uC911 \uC2B5\uB4DD\uC774 \uAC00\uB2A5\uD558\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 1
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 2
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB300\uB2F4\uD568"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\u3010\uC774\uC131\uCE58\u3011 \uCD5C\uB300\uCE58\uAC00 1\uC810 \uC99D\uAC00\uD55C\uB2E4.
+      \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB294 \uB2E4\uC911 \uC2B5\uB4DD\uC774 \uAC00\uB2A5\uD558\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 1
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 1
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC694\uB839"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uD2B9\uAE30\uB97C \uD558\uB098 \uB354 \uD68D\uB4DD\uD560 \uC218 \uC788\uB2E4.
+      \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB294 2\uAC1C\uAE4C\uC9C0 \uC2B5\uB4DD\uC774
+      \uAC00\uB2A5\uD558\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 2
+    maxAcquireCount: 2
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 1
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC790\uC0B0"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC544\uC774\uD15C\uC744 2\uAC1C \uB354 \uAC00\uC9C4\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC7A5\uAC11"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uB370\uBBF8\uC9C0\uB97C \uC785\uC5C8\uC744 \uB54C,
+      \uADF8 \uB370\uBBF8\uC9C0\uB97C 1\uC810 \uAC10\uC18C\uD560 \uC218 \uC788\uB2E4.
+      \uB2E8, \uC774 \uD6A8\uACFC\uB85C \uB370\uBBF8\uC9C0\uB97C 0 \uC774\uD558\uB85C
+      \uB9CC\uB4E4 \uC218\uB294 \uC5C6\uB2E4"
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC9C0\uC704"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC758 \uC870\uC0AC\uD310\uC815\uC5D0 +1\uC758 \uC218\uC815\uC744
+      \uC801\uC6A9\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778  1"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBB34\uC220"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uD30C\uAD34"
+    - isAreaEntry: 0
+      value: "\uAD6C\uD0C0"
+    - isAreaEntry: 0
+      value: "\uC808\uB2E8"
+    - isAreaEntry: 0
+      value: "\uCC0C\uB974\uAE30"
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74 ,\uBAA9\uD45C\uC5D0\uAC8C
+      1D6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uC774\uB54C \uBB34\uAE30
+      1\uAC1C\uB97C \uC18C\uBE44\uD560 \uB54C\uB9C8\uB2E4 \uB300\uBBF8\uC9C0\uB97C
+      2\uC810\uC529 \uC99D\uAC00\uC2DC\uD0AC \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD654\uC5FC\uBCD1"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC18C\uAC01"
+    effect: "\uB2F9\uC2E0\uBCF4\uB2E4 \uC18D\uB3C4\uAC00 \uB290\uB9B0 \uCE90\uB9AD\uD130
+      \uC911\uC5D0\uC11C \uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD574\uC11C \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uC774 \uBA85\uC911\uD310\uC815\uC5D0\uB294 -2\uC758 \uC218\uC815\uC774
+      \uC801\uC6A9\uB41C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0
+      \uBAA9\uD45C\uAC00 \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74,
+      \uBAA9\uD45C\uC5D0\uAC8C 1D6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4.
+      \uB610, \uC774 \uACF5\uACA9\uC73C\uB85C 1\uC810 \uC774\uC0C1 \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uC740 \uCE90\uB9AD\uD130\uB294 \uADF8 \uC804\uD22C \uB3D9\uC548 \uB77C\uC6B4\uB4DC\uAC00
+      \uB05D\uB0A0\uB54C\uB9C8\uB2E4 1\uC810\uC758 \uB370\uBBF8\uC9C0(\uC774 \uD6A8\uACFC\uB294
+      \uB204\uC801\uB418\uC9C0 \uC54A\uB294\uB2E4)\uB97C \uC785\uB294\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD22C\uC11D"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC0AC\uACA9"
+    effect: "\uBAA9\uD45C\uB97C 3\uBA85\uAE4C\uC9C0 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uB294
+      \uAC01\uC790 \uD68C\uD53C\uD310\uC815\uC744 \uD55C\uB2E4. \uD68C\uD53C\uD310\uC815\uC5D0
+      \uC2E4\uD328\uD55C \uBAA9\uD45C\uC5D0\uAC8C 2\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB3C5\uCE68"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC57D\uD488"
+    effect: "\uB2F9\uC2E0\uACFC \uAC19\uC740 \uC18D\uB3C4\uC758 \uCE90\uB9AD\uD130
+      \uC911\uC5D0\uC11C \uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD574\uC11C \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74 \uBAA9\uD45C\uC5D0\uAC8C
+      2D6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC911\uD654\uAE30"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uBCD1\uAE30"
+    effect: "\uC804\uD22C\uC5D0 \uCC38\uAC00\uD55C \uB2F9\uC2E0 \uC774\uC678\uC758
+      \uCE90\uB9AD\uD134 \uC804\uC6D0\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD558\uC5EC
+      \uBA85\uC911\uD310\uC815\uC744 \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774
+      \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uB294 \uAC01\uC790 \uD68C\uD53C\uD310\uC815\uC744
+      \uD55C\uB2E4. \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD55C \uBAA9\uD45C\uC5D0\uAC8C
+      1D6+2\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uC774 \uD6A8\uACFC\uB294
+      \uD55C \uC804\uD22C\uB2F9 1\uD68C\uB9CC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC81C\uB839"
+    type: 0
+    designatedSpecialtyType: 4
+    designatedEntries: []
+    effect: "\uAD34\uC774 \uC5D0\uB108\uBBF8 \uC911\uC5D0\uC11C \uBAA9\uD45C\uB97C
+      1\uBA85 \uC120\uD0DD\uD55C\uB2E4. \uAD34\uC774 \uBD84\uC57C\uC5D0\uC11C \uBB34\uC791\uC704\uB85C
+      \uC9C0\uC815\uD2B9\uAE30\uB97C \uD558\uB098 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74 \uBAA9\uD45C\uC5D0\uAC8C
+      3D6-3\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD5CC\uC2E0"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uBE14\uB85D\uC744 \uD588\uC744 \uB54C\uB098 \u3010\uAC10\uC2F8\uAE30\u3011
+      \uC5B4\uBE4C\uB9AC\uD2F0\uC5D0 \uC131\uACF5\uD588\uC744 \uB54C \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uADF8\uB85C \uC778\uD574 \uC785\uC744 \uB370\uBBF8\uC9C0\uB97C
+      2\uC810 \uACBD\uAC10(\uCD5C\uC800 0\uC810)\uD560 \uC218 \uC788\uB2E4. \uB9CC\uC57D
+      \uB370\uBBF8\uC9C0\uB97C \uB300\uC2E0 \uC785\uC5B4\uC904 \uC0C1\uB300\uC5D0
+      \uB300\uD574 \uB2F9\uC2E0\uC774 \uD50C\uB7EC\uC2A4 \u3010\uAC10\uC815\u3011\uC744
+      \uAC00\uC9C0\uACE0 \uC788\uB2E4\uBA74 \uCD94\uAC00\uB85C 2\uC810\uC744 \uB354
+      \uACBD\uAC10\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBD88\uD589 \uC911 \uB2E4\uD589"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uD38C\uBE14\uC744 \uBC1C\uC0DD\uC2DC\uCF30\uC744
+      \uB54C\uB098 \uB204\uAD70\uAC00\uC640 \uBC84\uD305\uC744 \uD588\uC744 \uB54C
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC6D0\uD558\uB294 \uC544\uC774\uD15C\uC744
+      1\uAC1C \uD68D\uB4DD\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2E0\uC18D\uD55C \uC77C\uCC98\uB9AC"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uD68C\uBCF5\uD310\uC815, \uC870\uC0AC\uD310\uC815, \uAC10\uC815\uD310\uC815\uC5D0\uC11C
+      \uC2A4\uD3D0\uC15C\uC774 \uBC1C\uC0DD\uD588\uC744 \uB54C \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uD68C\uBCF5\uD310\uC815, \uC870\uC0AC\uD310\uC815, \uAC10\uC815\uD310\uC815
+      \uC911 \uD558\uB098\uB97C \uD55C \uBC88 \uB354 \uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBD84\uC2E0\uC0AC\uBC14"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uB2F9\uC2E0\uC758 PC\uB294 \u3010\uC774\uC131\uCE58\u3011\uB97C
+      1\uC810 \uC18C\uBE44\uD55C\uB2E4. \uB2F9\uC2E0\uC740 \uB208\uC744 \uAC10\uACE0
+      \uAC80\uC9C0\uB97C \uCE90\uB9AD\uD130 \uC2DC\uD2B8\uC758 \uD2B9\uAE30 \uB9AC\uC2A4\uD2B8
+      \uC911 \u300A\uB9C8\uC220\u300B \uC704\uC5D0 \uC62C\uB9B0\uB2E4. GM\uC740 \uC544\uBB34\uAC70\uB098
+      \uD2B9\uAE30\uB97C \uD558\uB098 \uC120\uD0DD\uD574\uC11C \uC120\uC5B8\uD55C\uB2E4.
+      \uB2F9\uC2E0\uC740 \uB208\uC744 \uAC10\uC740 \uCC44\uB85C \uC190\uAC00\uB77D\uC744
+      \uC6C0\uC9C1\uC778\uB2E4. \uB208\uC744 \uB5B4\uC744 \uB54C, GM\uC774 \uC9C0\uC815\uD55C
+      \uD2B9\uAE30 \uC704\uC5D0 \uC190\uAC00\uB77D\uC774 \uC62C\uB77C\uAC00 \uC788\uB2E4\uBA74
+      \uC6D0\uD558\uB294 \u3010\uBE44\uBC00\u3011\uC744 \uD558\uB098 \uD68D\uB4DD\uD560
+      \uC218 \uC788\uB2E4. \uADF8\uB807\uC9C0 \uC54A\uB2E4\uBA74 \uB2F9\uC2E0\uC758
+      PC\uB294 \u3010\uC774\uC131\uCE58\u3011\uAC00 1\uC810 \uAC10\uC18C\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uACF5\uAC10"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC778\uB0B4"
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4.
+      \uB2F9\uC2E0\uC774 \uD50C\uB7EC\uC2A4 \u3010\uAC10\uC815\u3011\uC744 \uAC00\uC9C4
+      \uCE90\uB9AD\uD130 1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4.
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uAC00
+      \uAC00\uC9C4 \uBBF8\uACF5\uAC1C \u3010\uAD11\uAE30\u3011 \uC911 1\uC7A5\uC744
+      \uBB34\uC791\uC704\uB85C \uC120\uD0DD\uD574\uC11C \uD68D\uB4DD\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAC04\uACA9"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uCD94\uC801"
+    effect: "\uC9C0\uC6D0\uD589\uB3D9. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uB2F9\uC2E0\uC758 \uC18D\uB3C4\uB97C 1\uC810 \uC99D\uAC00\uC2DC\uD0A4\uAC70\uB098,
+      1\uC810 \uAC10\uC18C\uC2DC\uD0AC \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC18D\uACF5"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uD6A8\uC728"
+    effect: "\uC804\uD22C \uC911\uC5D0 \uC18D\uB3C4\uAC00 \uAC19\uC740 \uCE90\uB9AD\uD130\uAC00
+      \uC788\uC5B4\uC11C 1D6\uC744 \uAD74\uB824 \uC21C\uC11C\uB97C \uC815\uD560 \uB54C
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uADF8 1D6\uC758 \uC218\uCE58\uB97C 2\uC810 \uC99D\uAC00\uC2DC\uD0AC
+      \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB3D9\uC694\uC2DC\uD0A4\uAE30"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uBBF8\uB514\uC5B4"
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uAC19\uC740 \uC7A5\uBA74\uC5D0 \uB4F1\uC7A5\uD55C \uCE90\uB9AD\uD130
+      \uC911\uC5D0\uC11C 1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4.
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC758
+      \u3010\uBE44\uBC00\u3011\uC744 \uB2F9\uC2E0\uC774 \uD68D\uB4DD\uD588\uC744
+      \uB54C \uB2F9\uC2E0\uC774 \uC1FC\uD06C\uB97C \uBC1B\uAC8C\uB418\uB294\uC9C0\uB97C
+      GM\uC5D0\uAC8C \uBAB0\uB798 \uB4E4\uC744 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2EC\uB839\uC0AC\uC9C4"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uCE74\uBA54\uB77C"
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD55C
+      \uACBD\uC6B0, \uADF8 \uC7A5\uBA74\uC5D0 \uB4F1\uC7A5\uD55C \uCE90\uB9AD\uD130
+      \uC911\uC5D0\uC11C \uC18D\uC131\uC774 \uAD34\uC774\uC778 \uC5D0\uB108\uBBF8\uB098
+      \uBCF8\uC778\uC774 \uAD34\uC774\uC784\uC744 \uB098\uD0C0\uB0B4\uB294 \u3010\uBE44\uBC00\u3011\uC744
+      \uAC00\uC9C4 \uCE90\uB9AD\uD130\uAC00 \uC788\uB2E4\uBA74 \uADF8 \uC0AC\uC2E4\uC744
+      GM\uC774 \uAC00\uB974\uCCD0\uC900\uB2E4. \uD574\uB2F9\uC790\uAC00 \uC5EC\uB7FF\uC774\uB77C\uBA74
+      \uB204\uAC00 \uD574\uB2F9\uD558\uB294\uC9C0\uB294 \uB4E4\uC744 \uC218 \uC5C6\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC5F0\uAE08\uC220"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uD654\uD559"
+    effect: "\uC804\uD22C\uAC00 \uB05D\uB0A0 \uB54C \uD589\uB3D9\uBD88\uB2A5\uC774
+      \uB41C \uAD34\uC774 \uC5D0\uB108\uBBF8\uAC00 \uC788\uB2E4\uBA74 \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74
+      \uC9C4\uD1B5\uC81C\uB97C \uD558\uB098 \uD68D\uB4DD\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uCD5C\uBA74\uC220"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC778\uB958\uD559"
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uAC19\uC740 \uC7A5\uBA74\uC5D0 \uB4F1\uC7A5\uD55C \uCE90\uB9AD\uD130
+      \uC911\uC5D0\uC11C 1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4.
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uADF8
+      \uC7A5\uBA74 \uB3D9\uC548 \uBAA9\uD45C\uAC00 \uC2B5\uB4DD\uD55C \uC11C\uD3EC\uD2B8
+      \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC790\uC2E0\uC774 \uC2B5\uB4DD\uD55C \uAC83\uCC98\uB7FC
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB2E4\uC6B0\uC9D5"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC9C0\uC800"
+    effect: "\uB4DC\uB77C\uB9C8 \uC7A5\uBA74\uC5D0\uC11C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74
+      1D6\uC744 \uAD74\uB9B0\uB2E4. \uADF8 \uB208\uC774 1\uC774\uB77C\uBA74 \uC9C4\uD1B5\uC81C,
+      2~3\uC774\uB77C\uBA74 \uBB34\uAE30, 4~5\uB77C\uBA74 \uBD80\uC801\uC744 \uD558\uB098
+      \uD68D\uB4DD\uD55C\uB2E4. \uC8FC\uC0AC\uC704 \uB208\uC774 6\uC774\uB77C\uBA74
+      \uADF8 \uC2DC\uB098\uB9AC\uC624\uC5D0 \uB4F1\uC7A5\uD560 \uAD34\uC774 \uC5D0\uB108\uBBF8\uAC00
+      \uB4F1\uC7A5(\uB4F1\uC7A5\uD558\uC9C0 \uC54A\uB294 \uC2DC\uB098\uB9AC\uC624\uB77C\uBA74
+      \uC544\uBB34 \uC77C\uB3C4 \uC5C6\uB2E4)\uD55C\uB2E4. \uC774\uB54C \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758
+      \uC0AC\uC6A9\uC790\uB294 \uAD34\uC774 \uBD84\uC57C\uC5D0\uC11C \uBB34\uC791\uC704\uB85C
+      \uD2B9\uAE30 \uD558\uB098\uB97C \uC120\uD0DD\uD558\uC5EC \uACF5\uD3EC\uD310\uC815\uC744
+      \uD55C\uB2E4. \uADF8 \uACF5\uD3EC\uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74
+      \uD574\uB2F9 \uAD34\uC774\uC758 \u3010\uAC70\uCC98\u3011\uB97C \uD68D\uB4DD\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2E0\uC559\uC2EC"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC758 \uD310\uC815 \uACB0\uACFC\uAC00 \uC2A4\uD3D0\uC15C\uC774\uBA74
+      \uBD80\uC801\uC744 \uD558\uB098 \uD68D\uB4DD\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD589\uC6B4"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uD68C\uBCF5\uD310\uC815, \uC870\uC0AC\uD310\uC815, \uAC10\uC815\uD310\uC815\uC758
+      \uC2A4\uD3D0\uC15C\uCE58\uAC00 10\uC774 \uB41C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC601\uAC10"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uD604\uC0C1 \uC5D0\uB108\uBBF8\uB97C \uACF5\uACA9\uD560 \uB54C, GM\uC774
+      \uC9C0\uC815\uD55C \uD2B9\uAE30\uAC00 \uC544\uB2C8\uC5B4\uB3C4 \uD38C\uBE14\uCE58\uAC00
+      \uC99D\uAC00\uD558\uC9C0 \uC54A\uACE0, -5\uC758 \uC218\uC815\uB3C4 \uC801\uC6A9\uD558\uC9C0
+      \uC54A\uB294\uB2E4. \uB610, \uAD34\uC774 \uC5D0\uB108\uBBF8\uC758 \uACF5\uACA9\uC5D0
+      \uB300\uD574 \uD68C\uD53C\uD310\uC815\uC744 \uD560 \uB54C +1\uC758 \uC218\uC815\uC744
+      \uC801\uC6A9\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB9C8\uB3C4\uC11C"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC9C0\uC815\uD2B9\uAE30\uAC00 \uAD34\uC774 \uBD84\uC57C\uC778 \uD2B9\uAE30
+      \uD310\uC815\uC744 \uC138\uC158 \uC911 \uD55C \uBC88\uB9CC \uC8FC\uC0AC\uC704\uB97C
+      \uAD74\uB9AC\uC9C0 \uC54A\uACE0 \uC790\uB3D9\uC73C\uB85C \uC131\uACF5(\uC2A4\uD3D0\uC15C\uC740
+      \uC544\uB2D8)\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBE44\uBC00\uACB0\uC0AC"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC138\uC158\uC774 \uB05D\uB0A0 \uB54C,  \u3010\uBCA0\uB4DC\uC5D4\uB4DC\uD45C\u3011\uB97C
+      \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uC558\uACE0 \uB2F9\uC2E0\uC774 \uCC29\uB780\uC0C1\uD0DC\uAC00
+      \uC544\uB2C8\uB77C\uBA74, \uB2F9\uC2E0\uC758 \uD604\uC7AC\uD654\uD55C \u3010\uAD11\uAE30\u3011
+      \uC218\uB9CC\uD07C \uACF5\uC801\uC810\uC744 \uD68D\uB4DD\uD55C\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC778\uB3C4\uC790"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uAD34\uC774 \uC5D0\uB108\uBBF8\uC640 \uC804\uD22C\uB97C \uD560 \uB54C
+      \uB370\uBBF8\uC9C0\uB97C 1\uC810 \uACBD\uAC10\uD560 \uC218 \uC788\uB2E4. \uB610,
+      \uBD80\uC801\uC744 \uC18C\uBE44\uD560 \uB54C\uB9C8\uB2E4 \uB370\uBBF8\uC9C0\uB97C
+      2\uC810\uC529 \uB354 \uACBD\uAC10\uD560 \uC218 \uC788\uB2E4. \uB2E8, \uC774
+      \uD6A8\uACFC\uB85C \uB370\uBBF8\uC9C0\uB97C 0 \uC774\uD558\uB85C \uB9D0\uB4E4
+      \uC218\uB294 \uC5C6\uB2E4."
+    library: "\uC778\uC138\uC778 2"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uAE30\uACC4\uACF5\uACA9"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uAE30\uACC4"
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74, \uBAA9\uD45C\uC5D0\uAC8C
+      3D6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uB2E8, \uC774
+      \uD6A8\uACFC\uB85C \uBAA9\uD45C\uAC00 \uD589\uB3D9\uBD88\uB2A5\uC774 \uB418\uC9C0
+      \uC54A\uC558\uB2E4\uBA74, \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uC758 \uC0AC\uC6A9\uC790\uB294
+      \uAD34\uC774 \uD2B9\uAE30\uBD84\uC57C\uC5D0\uC11C \uBB34\uC791\uC704\uB85C
+      \uD2B9\uAE30 \uD558\uB098\uB97C \uC120\uD0DD\uD558\uC5EC \uACF5\uD3EC\uD310\uC815\uC744
+      \uD55C\uB2E4. \uC774 \uD6A8\uACFC\uB294 \uD55C \uC804\uD22C\uB2F9 1\uD68C\uB9CC
+      \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB3D9\uC815/\uCC98\uB140"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uBD80\uB044\uB7EC\uC6C0"
+    effect: "\uB2F9\uC2E0\uC774 \uAD34\uC774\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uC5C8\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uADF8 \uB370\uBBF8\uC9C0\uB97C
+      1D6\uC810 \uAC10\uC18C\uD560 \uC218 \uC788\uB2E4. \uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB294
+      PC \uC911\uC5D0 \uD589\uB3D9\uBD88\uB2A5\uC774 \uB41C \uC790\uAC00 1\uBA85
+      \uC774\uC0C1 \uC788\uC73C\uBA74 \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB9C1\uD06C \uBAA8\uC74C \uC0AC\uC774\uD2B8"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uBBF8\uB514\uC5B4"
+    effect: "\uB2F9\uC2E0\uC774 \uACF5\uD3EC\uD310\uC815\uC5D0 \uC2E4\uD328\uD588\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0
+      \uC131\uACF5\uD558\uBA74 \uACF5\uC801\uC810\uC744 1\uC810 \uD68D\uB4DD\uD560
+      \uC218 \uC788\uB2E4. \uC774 \uD6A8\uACFC\uB85C \uACF5\uC801\uC810\uC744 4\uC810
+      \uC774\uC0C1 \uD68D\uB4DD\uD560 \uC218\uB294 \uC5C6\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uACFC\uD559\uC801 \uC124\uBA85"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uAD50\uC591"
+    effect: "\uB204\uAD70\uAC00\uAC00 \uAD34\uC774\uC640 \uB9CC\uB098\uC11C \uACF5\uD3EC\uD310\uC815\uC744
+      \uD560 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uADF8 \uD310\uC815\uC5D0 +2\uC758
+      \uC218\uC815\uC774 \uC801\uC6A9\uB41C\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uBA85\uBA85"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uBBFC\uC18D\uD559"
+    effect: "\uB2F9\uC2E0\uC774 \uADF8 \uC138\uC158\uC5D0\uC11C \uCC98\uC74C \uBCF4\uB294
+      \uAD34\uC774 \uC5D0\uB108\uBBF8\uC640 \uB9CC\uB0A0 \uB54C \uC0AC\uC6A9\uD560
+      \uC218 \uC788\uB2E4. \uADF8 \uC5D0\uB108\uBBF8\uC758 \uC774\uB984\uC744 \uC0DD\uAC01\uD558\uACE0
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC744 \uD55C\uB2E4. \uC131\uACF5\uD558\uBA74
+      \uADF8 \uC138\uC158 \uB3D9\uC548 \uD574\uB2F9 \uC5D0\uB108\uBBF8\uC5D0 \uB300\uD574
+      \uC870\uC0AC\uD310\uC815\uC774\uB098 \uBA85\uC911\uD310\uC815\uC744 \uD560
+      \uB54C \uB2EC\uC131\uCE58\uAC00 1\uC810 \uC99D\uAC00\uD55C\uB2E4. \uC774 \uD6A8\uACFC\uB294
+      \uB3D9\uC885\uC758 \uC5D0\uB108\uBBF8\uC5D0\uAC8C\uB294 \uB204\uC801\uB418\uC9C0
+      \uC54A\uB294\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uD638\uB7EC \uB9C8\uB2C8\uC544"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC138\uC158\uC774 \uC2DC\uC791\uD560 \uB54C \uAD34\uC774 \uC5D0\uB108\uBBF8\uB97C
+      \uC544\uBB34\uAC70\uB098 \uB450 \uC885\uB958 \uC120\uD0DD\uD55C\uB2E4. \uADF8
+      \uC138\uC158 \uB3D9\uC548 \uADF8 \uC5D0\uB108\uBBF8\uC640 \uB9CC\uB0AC\uC744
+      \uB54C\uC758 \uACF5\uD3EC\uD310\uC815\uC5D0 \uC790\uB3D9\uC73C\uB85C \uC131\uACF5\uD55C\uB2E4."
+    library: "\uC0AC\uC2E4\uC740 \uBB34\uC11C\uC6B4 \uD604\uB300 \uC77C\uBCF8"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC704\uB300\uD55C \uAC1C\uCE20\uBE44"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uD310\uC815\uC744 \uC704\uD574 \uC8FC\uC0AC\uC704\uB97C
+      \uAD74\uB9B0 \uD6C4\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC544\uBB34\uAC70\uB098
+      \uC544\uC774\uD15C\uC744 1\uAC1C \uC18C\uBE44\uD558\uBA74 \uADF8 \uD310\uC815\uC758
+      \uB2EC\uC131\uCE58\uB97C 1\uC810 \uC99D\uAC00\uC2DC\uD0AC \uC218 \uC788\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC6D0\uC2A4 \uC5B4\uD3F0 \uC5B4 \uD0C0\uC784"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uB204\uAD70\uAC00\uB97C \uD589\uB3D9\uBD88\uB2A5\uC73C\uB85C
+      \uB9CC\uB4E4\uC5C8\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uB2F9\uC2E0\uC758
+      \uBB34\uAE30\uB97C 1\uAC1C \uC18C\uBE44\uD558\uBA74 \uB610 \uD55C \uBC88 \uACF5\uACA9\uC744
+      \uD560 \uC218 \uC788\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB728\uAC70\uC6B4 \uAC83\uC774 \uC88B\uC544"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uAC10\uC815\uD310\uC815\uC5D0 \uC131\uACF5\uD574\uC11C
+      \uC11C\uB85C \uD50C\uB7EC\uC2A4 \u3010\uAC10\uC815\u3011\uC744 \uD68D\uB4DD\uD588\uC744
+      \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uB2F9\uC2E0\uACFC \uAC10\uC815\uD310\uC815\uC758
+      \uBAA9\uD45C \uC911 \uD55C\uCABD\uC744 \uBAA9\uD45C\uB85C \uD558\uC5EC \uD68C\uBCF5\uD310\uC815\uC744
+      \uD55C \uBC88 \uD560 \uC218 \uC788\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC5D0\uBE44\uC5D0\uC774\uD130"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uD0C8\uAC83"
+    effect: "\uB2F9\uC2E0\uC774 \uCC38\uAC00\uD558\uC9C0 \uC54A\uC740 \uC81C2\uB77C\uC6B4\uB4DC
+      \uC2DC\uC791\uBD80\uD130 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uADF8 \uC804\uD22C\uC5D0 \uCC38\uAC00\uD560
+      \uC218 \uC788\uB2E4. \uC18D\uB3C4\uB294 1D6\uC744 \uAD74\uB824\uC11C \uBB34\uC791\uC704\uB85C
+      \uACB0\uC815\uD55C\uB2E4. \uADF8 \uC18D\uB3C4\uC5D0 \uB2F9\uC2E0 \uC774\uC678\uC758
+      \uCE90\uB9AD\uD130\uAC00 \uC788\uB2E4\uBA74 \uADF8\uC911\uC5D0\uC11C \uC6D0\uD558\uB294
+      \uB9CC\uD07C \uBAA9\uD45C\uB97C \uC120\uD0DD\uD55C\uB2E4. \uBAA9\uD45C\uC5D0\uAC8C
+      1D6\uC810\uC758 \uB370\uBBF8\uC9C0(\uBC84\uD305\uC740 \uBC1C\uC0DD\uD558\uC9C0
+      \uC54A\uC74C)\uB97C \uC785\uD78C\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2A4\uCE74 \uD398\uC774\uC2A4"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uD611\uBC15"
+    effect: "\uB2F9\uC2E0\uC774 \uB204\uAD70\uAC00\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+      \uC785\uD614\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uAC19\uC740
+      \uC7A5\uBA74\uC5D0 \uC788\uB294 \uB2F9\uC2E0 \uC774\uC678\uC758 \uCE90\uB9AD\uD130
+      1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4. \uC9C0\uC815\uD2B9\uAE30
+      \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC758 \u3010\uC774\uC131\uCE58\u3011\uB97C
+      1\uC810 \uAC10\uC18C\uC2DC\uD0AC \uC218 \uC788\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC5B8\uD130\uCC98\uBE14"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uCC29\uB780\uC0C1\uD0DC\uAC00 \uB418\uC5B4\uB3C4 \u3010\uC0DD\uBA85\uB825\u3011\uC774\uB098
+      \u3010\uC774\uC131\uCE58\u3011 \uC18C\uBE44 \uC5C6\uC774 \uBE14\uB85D, \uC9C0\uC6D0\uD589\uB3D9,
+      \uC11C\uD3EC\uD2B8 \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4."
+    library: "\uAD11\uB780\uC758 20\uB144\uB300"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uB3D9\uC591 \uACA9\uD22C\uC220"
+    type: 0
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uAD6C\uD0C0"
+    effect: "\uBAA9\uD45C 1\uBA85\uC744 \uC120\uD0DD\uD558\uC5EC \uBA85\uC911\uD310\uC815\uC744
+      \uD55C\uB2E4. \uBA85\uC911\uD310\uC815\uC774 \uC131\uACF5\uD558\uACE0 \uBAA9\uD45C\uAC00
+      \uD68C\uD53C\uD310\uC815\uC5D0 \uC2E4\uD328\uD558\uBA74, \uBAA9\uD45C\uC5D0\uAC8C
+      1D6\uC810\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uD78C\uB2E4. \uB610, \uB77C\uC6B4\uB4DC\uAC00
+      \uB05D\uB0A0 \uB54C \uBAA9\uD45C\uC758 \uC18D\uB3C4\uB97C \uB370\uBBF8\uC9C0
+      \uACB0\uC815\uC2DC\uC5D0 \uAD74\uB9B0 1D6\uC758 \uB208\uACFC \uAC19\uC740 \uC18D\uB3C4\uB85C
+      \uBCC0\uACBD\uD55C\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2E0\uC0AC/\uC219\uB140"
+    type: 1
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uB2F9\uC2E0\uC774 \uD50C\uB7EC\uC2A4 \u3010\uAC10\uC815\u3011\uC73C\uB85C
+      \uAC10\uC815\uC218\uC815\uC744 \uD588\uC744 \uB54C \uC0AC\uC6A9\uD560 \uC218
+      \uC788\uB2E4. \uCD94\uAC00\uB85C \uB2EC\uC131\uCE58\uB97C 1\uC810 \uC99D\uAC00\uC2DC\uD0AC
+      \uC218 \uC788\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC601\uB9E4"
+    type: 1
+    designatedSpecialtyType: 0
+    designatedEntries:
+    - isAreaEntry: 0
+      value: "\uC601\uD63C"
+    effect: "\uB2F9\uC2E0\uC774 \uC7A5\uBA74 \uD50C\uB808\uC774\uC5B4\uC778 \uB4DC\uB77C\uB9C8
+      \uC7A5\uBA74\uC5D0 \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4. \uB2F9\uC2E0\uC758
+      \u3010\uC774\uC131\uCE58\u3011\uB97C 1\uC810 \uAC10\uC18C\uC2DC\uD0A4\uACE0,
+      \uC0AC\uB9DD\uD55C \uCE90\uB9AD\uD130 1\uBA85\uC744 \uBAA9\uD45C\uB85C \uC120\uD0DD\uD55C\uB2E4.
+      \uC9C0\uC815\uD2B9\uAE30 \uD310\uC815\uC5D0 \uC131\uACF5\uD558\uBA74 \uBAA9\uD45C\uC5D0
+      \uB300\uD574 \uC870\uC0AC\uD310\uC815\uC744 \uD560 \uC218 \uC788\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uACE0\uADC0\uD55C \uC2E0\uBD84"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB97C \uC2B5\uB4DD\uD55C \uCE90\uB9AD\uD130\uC5D0
+      \uB300\uD574 \uB9C8\uC774\uB108\uC2A4 \u3010\uAC10\uC815\u3011\uC744 \uD68D\uB4DD\uD55C
+      \uCE90\uB9AD\uD130\uB294 \u3010\uC0DD\uBA85\uB825\u3011\uC774\uB098 \u3010\uC774\uC131\uCE58\u3011\uAC00
+      1\uC810 \uAC10\uC18C\uD55C\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC2DD\uBBFC\uC9C0 \uACBD\uD5D8\uC790"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC0DD\uBB3C \uC5D0\uB108\uBBF8\uB97C \uACF5\uACA9\uD558\uBA74 \uBA74\uC911\uD310\uC815\uC5D0
+      +1\uC758 \uC218\uC815\uC774 \uC801\uC6A9\uB418\uACE0 \uB370\uBBF8\uC9C0\uAC00
+      1D6\uC810 \uC99D\uAC00\uD55C\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0
+  - name: "\uC544\uD3B8"
+    type: 2
+    designatedSpecialtyType: 3
+    designatedEntries: []
+    effect: "\uC774 \uC5B4\uBE4C\uB9AC\uD2F0\uB294 \u300A\uC57D\uD488\u300B \uD2B9\uAE30\uB97C
+      \uC2B5\uB4DD\uD558\uC9C0 \uC54A\uC73C\uBA74 \uC2B5\uB4DD\uD560 \uC218 \uC5C6\uB2E4.
+      \uC544\uC774\uD15C \uC9C4\uD1B5\uC81C\uB97C \uC0AC\uC6A9\uD558\uBA74 \uCD94\uAC00\uB85C
+      \u3010\uC0DD\uBA85\uB825\u3011\uC774\uB098 \u3010\uC774\uC131\uCE58\u3011\uB97C
+      1\uC810 \uB354 \uD68C\uBCF5\uD560 \uC218 \uC788\uB2E4."
+    library: "\uBE45\uD1A0\uB9AC\uC544\uC758 \uC5B4\uB460"
+    acquireMode: 0
+    maxAcquireCount: 1
+    statEffect:
+      lifeBonus: 0
+      sanityBonus: 0
+      specialtyBonus: 0
+    acquireCondition: 
+    specialEffect: 0

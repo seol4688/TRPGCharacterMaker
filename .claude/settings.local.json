@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /d/TRPGCharacterMaking/Assets/Scenes -name \"*.unity\" -exec grep -l \"InsaneManager\\\\|Specialty\" {} \\\\;)"
+    ]
+  }
+}
