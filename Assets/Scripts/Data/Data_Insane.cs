@@ -25,9 +25,13 @@ public class InsaneGrowthData
     public const int DefaultFearLevel = 1;
 
     /// <summary>누적 공적점.</summary>
-    public int meritPoints = 0;
+    public int meritPoints  = 0;
     /// <summary>현재 공포심 (최솟값 MinFearLevel).</summary>
-    public int fearLevel   = DefaultFearLevel;
+    public int fearLevel    = DefaultFearLevel;
+    /// <summary>어빌리티 습득으로 증가된 선택 슬롯 수.</summary>
+    public int abilityBonus = 0;
+    /// <summary>경제력 상승으로 증가된 아이템 슬롯 수.</summary>
+    public int itemBonus    = 0;
 }
 
 [Serializable]

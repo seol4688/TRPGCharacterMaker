@@ -53,7 +53,9 @@ public class InsaneManager : MonoBehaviour
 
     [Header("Growth")]
     [Tooltip("성장 창 컴포넌트. 캐릭터 로드 시 공적점·공포심 UI를 자동 갱신합니다.")]
-    [SerializeField] private GrowthWindow growthWindow;
+    [SerializeField] private GrowthWindow    growthWindow;
+    [Tooltip("공적점 사용 창 컴포넌트. 캐릭터 로드 시 UI를 자동 갱신합니다.")]
+    [SerializeField] private UsePointWindow  usePointWindow;
 
     [Header("Modal")]
     [Tooltip("인세인 전용 불러오기 모달")]
@@ -274,7 +276,7 @@ public class InsaneManager : MonoBehaviour
         EnsureCurrentSheet();
 
         string itemName = GetItemName(itemType);
-        if (currentSheet.item.startingItemNames.Count >= DefaultItemCount)
+        if (currentSheet.item.startingItemNames.Count >= GetTotalItemCount())
         {
             return false;
         }
@@ -510,6 +512,7 @@ public class InsaneManager : MonoBehaviour
         }
 
         growthWindow?.RefreshUI();
+        usePointWindow?.RefreshUI();
     }
 
     public void SetAbilitySaveData(InsaneAbilityData abilityData)
@@ -683,7 +686,7 @@ public class InsaneManager : MonoBehaviour
             }
         }
 
-        int remaining = maxAbilityCount - selected;
+        int remaining = GetTotalAbilityCount() - selected;
         if (remaining <= 0)
         {
             abilityCountText.gameObject.SetActive(false);
@@ -753,11 +756,73 @@ public class InsaneManager : MonoBehaviour
 
     // ─── 성장 데이터 접근자 ───────────────────────────────────
 
-    /// <summary>현재 누적 공적점을 반환합니다.</summary>
+    // 공적점 사용 비용 상수
+    public const int AbilityAcquisitionCost = 4;
+    public const int FearOvercomeCost = 5;
+    public const int EconomyRiseCost  = 2;
+
+    /// <summary>설정 기본값 + growth 보너스를 포함한 실질 어빌리티 선택 슬롯 수.</summary>
+    public int GetTotalAbilityCount()
+        => maxAbilityCount + (currentSheet?.growth?.abilityBonus ?? 0);
+
+    /// <summary>기본 아이템 수 + growth 보너스를 포함한 실질 아이템 슬롯 수.</summary>
+    public int GetTotalItemCount()
+        => DefaultItemCount + (currentSheet?.growth?.itemBonus ?? 0);
+
+    /// <summary>어빌리티 습득에 필요한 공적점 (현재 슬롯 수 × 4).</summary>
+    public int GetAbilityAcquisitionCost()
+        => GetTotalAbilityCount() * AbilityAcquisitionCost;
+
+    /// <summary>
+    /// 어빌리티 습득을 수행합니다.
+    /// 공적점이 충분하면 비용을 차감하고 슬롯 +1. 부족하면 false 반환.
+    /// </summary>
+    public bool TryAcquireAbilitySlot()
+    {
+        EnsureCurrentSheet();
+        int cost = GetAbilityAcquisitionCost();
+        if (GetMeritPoints() < cost) return false;
+
+        currentSheet.growth.abilityBonus++;
+        AddMeritPoints(-cost);       // UpdateStatTexts 포함
+        UpdateAbilityCountText();
+        return true;
+    }
+
+    /// <summary>
+    /// 공포심 극복을 수행합니다.
+    /// 공적점 5 차감 후 growth.fearLevel -1 (최솟값 1). 조건 미충족 시 false 반환.
+    /// </summary>
+    public bool TryOvercomeFear()
+    {
+        EnsureCurrentSheet();
+        if (GetMeritPoints() < FearOvercomeCost)              return false;
+        if (GetFearLevel() <= InsaneGrowthData.MinFearLevel)  return false;
+
+        ChangeFearLevel(-1);         // ApplyFearSpecialtyMax + UpdateFearCountText 포함
+        AddMeritPoints(-FearOvercomeCost);
+        return true;
+    }
+
+    /// <summary>
+    /// 경제력 상승을 수행합니다.
+    /// 공적점 5 차감 후 아이템 슬롯 +1. 공적점 부족 시 false 반환.
+    /// </summary>
+    public bool TryRiseEconomy()
+    {
+        EnsureCurrentSheet();
+        if (GetMeritPoints() < EconomyRiseCost) return false;
+
+        currentSheet.growth.itemBonus++;
+        AddMeritPoints(-EconomyRiseCost);
+        return true;
+    }
+
+    /// <summary>설정 기본값 + 누적 growth 공적점의 합산값을 반환합니다.</summary>
     public int GetMeritPoints()
     {
         EnsureCurrentSheet();
-        return currentSheet.growth.meritPoints;
+        return meritPoint + currentSheet.growth.meritPoints;
     }
 
     /// <summary>공적점을 추가합니다 (음수도 허용).</summary>
@@ -792,8 +857,7 @@ public class InsaneManager : MonoBehaviour
 
     private void UpdateStatTexts()
     {
-        int totalMeritPoints = meritPoint + (currentSheet?.growth?.meritPoints ?? 0);
-        profile?.UpdateStatDisplay(currentSheet.maxLife, currentSheet.maxSanity, totalMeritPoints);
+        profile?.UpdateStatDisplay(currentSheet.maxLife, currentSheet.maxSanity, GetMeritPoints());
     }
 
     public void EnsureCurrentSheet()
@@ -830,8 +894,10 @@ public class InsaneManager : MonoBehaviour
             sheet.ability.acquiredAbilityNames.Clear();
             sheet.ability.abilities.Clear();
             EnsureDefaultAbilityData(sheet.ability);
-            sheet.growth.meritPoints = 0;
-            sheet.growth.fearLevel   = InsaneGrowthData.DefaultFearLevel;
+            sheet.growth.meritPoints  = 0;
+            sheet.growth.fearLevel    = InsaneGrowthData.DefaultFearLevel;
+            sheet.growth.abilityBonus = 0;
+            sheet.growth.itemBonus    = 0;
             return;
         }
     }
@@ -907,7 +973,7 @@ public class InsaneManager : MonoBehaviour
 
         for (int i = sheet.item.startingItemNames.Count - 1; i >= 0; i--)
         {
-            if (i >= DefaultItemCount)
+            if (i >= DefaultItemCount + sheet.growth.itemBonus)
             {
                 sheet.item.startingItemNames.RemoveAt(i);
             }
@@ -1066,8 +1132,10 @@ public class InsaneManager : MonoBehaviour
             ability   = CloneAbilityData(sheet.ability),
             growth    = new InsaneGrowthData
             {
-                meritPoints = sheet.growth.meritPoints,
-                fearLevel   = sheet.growth.fearLevel
+                meritPoints  = sheet.growth.meritPoints,
+                fearLevel    = sheet.growth.fearLevel,
+                abilityBonus = sheet.growth.abilityBonus,
+                itemBonus    = sheet.growth.itemBonus
             }
         };
 

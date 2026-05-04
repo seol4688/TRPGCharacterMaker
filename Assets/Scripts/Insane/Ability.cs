@@ -124,7 +124,7 @@ public class Ability : MonoBehaviour
         int itemIndex = abilityItems.IndexOf(item);
         if (itemIndex >= 2 && string.IsNullOrEmpty(item.SelectedAbilityName))
         {
-            if (CountSelectedNonDefaultAbilities() >= insaneManager.MaxAbilityCount)
+            if (CountSelectedNonDefaultAbilities() >= insaneManager.GetTotalAbilityCount())
                 return;
         }
 
