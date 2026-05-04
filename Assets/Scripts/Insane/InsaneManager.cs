@@ -46,7 +46,8 @@ public class InsaneManager : MonoBehaviour
     private int maxAbilityCount = DefaultAbilityCount;
 
     [Header("경고")]
-    [SerializeField] private TextMeshProUGUI remainingCountText;
+    [SerializeField] private TextMeshProUGUI itemCountText;
+    [SerializeField] private TextMeshProUGUI specialtyCountText;
     [SerializeField] private TextMeshProUGUI curiosityCountText;
     [SerializeField] private TextMeshProUGUI fearCountText;
     [SerializeField] private TextMeshProUGUI abilityCountText;
@@ -171,6 +172,7 @@ public class InsaneManager : MonoBehaviour
         UpdateSanityFromSpecialtySelection(); // 생명력·이성치·공적점 표시 갱신
         ApplyCheckedSpecialtyMax();           // 특성 최대치 → CheckedSpecialtyChanged 이벤트 → UpdateRemainingCountText
         ApplyFearSpecialtyMax();              // 공포심 최대치 → FearSpecialtyChanged 이벤트 → UpdateFearCountText
+        this.ability?.TrimToAbilityMax();     // 새 최대치 초과 어빌리티를 뒤에서부터 선택 해제
         UpdateAbilityCountText();             // 어빌리티 남은 수 갱신
     }
 
@@ -283,6 +285,7 @@ public class InsaneManager : MonoBehaviour
 
         currentSheet.item.startingItemNames.Add(itemName);
         AddItemCount(itemName, 1);
+        UpdateItemCountText();
         return true;
     }
 
@@ -340,6 +343,7 @@ public class InsaneManager : MonoBehaviour
         string removedItemName = currentSheet.item.startingItemNames[slotIndex];
         currentSheet.item.startingItemNames.RemoveAt(slotIndex);
         RemoveItemCount(removedItemName, 1);
+        UpdateItemCountText();
     }
 
     public void RefreshSpecialtyDropdowns()
@@ -492,17 +496,21 @@ public class InsaneManager : MonoBehaviour
 
         if (specialty != null)
         {
-            ApplyFearSpecialtyMax();
+            // ApplySpecialtySaveData를 먼저 호출해 specialty.FearSpecialtyNames를 saveData 기준으로 초기화한 뒤,
+            // ApplyFearSpecialtyMax()에서 FearSpecialtyChanged 이벤트가 발생할 때 HandleFearSpecialtyChanged()가
+            // 올바른(초기화된) 공포심 데이터를 읽도록 순서를 보장합니다.
             RefreshSpecialtyDropdowns();
             specialty.ApplySpecialtySaveData(currentSheet.specialty);
             RefreshWeirdAreaNameFromSpecialty();
             specialty.RefreshCuriosityDropdown(currentSheet.specialty.curiosityAreaName);
+            ApplyFearSpecialtyMax();
         }
 
         UpdateSanityFromSpecialtySelection();
         UpdateRemainingCountText();
         UpdateFearCountText();
         UpdateCuriosityCountText();
+        UpdateItemCountText();
         RefreshProfileUI();
 
         if (ability != null)
@@ -626,20 +634,20 @@ public class InsaneManager : MonoBehaviour
 
     private void UpdateRemainingCountText()
     {
-        if (remainingCountText == null || specialty == null)
+        if (specialtyCountText == null || specialty == null)
             return;
 
         int remaining = (maxCheckedSpecialty + abilitySpecialtyBonus) - specialty.GetCheckedSpecialtyCount();
 
         if (remaining <= 0)
         {
-            remainingCountText.gameObject.SetActive(false);
+            specialtyCountText.gameObject.SetActive(false);
             return;
         }
 
-        remainingCountText.gameObject.SetActive(true);
-        remainingCountText.color = Color.red;
-        remainingCountText.text  = $"남은 특성 {remaining}개";
+        specialtyCountText.gameObject.SetActive(true);
+        specialtyCountText.color = Color.red;
+        specialtyCountText.text  = $"남은 특성 {remaining}개";
     }
 
     private void UpdateFearCountText()
@@ -696,6 +704,25 @@ public class InsaneManager : MonoBehaviour
         abilityCountText.gameObject.SetActive(true);
         abilityCountText.color = Color.red;
         abilityCountText.text  = $"남은 어빌리티 {remaining}개";
+    }
+
+    private void UpdateItemCountText()
+    {
+        if (itemCountText == null) return;
+
+        int total    = GetTotalItemCount();
+        int selected = currentSheet?.item?.startingItemNames?.Count ?? 0;
+        int remaining = total - selected;
+
+        if (remaining <= 0)
+        {
+            itemCountText.gameObject.SetActive(false);
+            return;
+        }
+
+        itemCountText.gameObject.SetActive(true);
+        itemCountText.color = Color.red;
+        itemCountText.text  = $"남은 아이템 {remaining}개";
     }
 
     private void UpdateSanityFromSpecialtySelection()
@@ -815,6 +842,7 @@ public class InsaneManager : MonoBehaviour
 
         currentSheet.growth.itemBonus++;
         AddMeritPoints(-EconomyRiseCost);
+        UpdateItemCountText();
         return true;
     }
 

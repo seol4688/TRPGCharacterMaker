@@ -324,6 +324,40 @@ public class Ability : MonoBehaviour
         ApplyAbilitySaveData(null);
     }
 
+    /// <summary>
+    /// 현재 선택된 어빌리티 수가 GetTotalAbilityCount()를 초과하면,
+    /// 뒤쪽(높은 인덱스)부터 초과분만큼 선택을 해제합니다.
+    /// Setting에서 어빌리티 수를 줄였을 때 호출합니다.
+    /// </summary>
+    public void TrimToAbilityMax()
+    {
+        EnsureInsaneManager();
+
+        int max     = insaneManager != null ? insaneManager.GetTotalAbilityCount() : 0;
+        int current = CountSelectedNonDefaultAbilities();
+
+        if (current <= max)
+            return;
+
+        // 현재 선택 상태를 수집해 뒤에서부터 초과분 제거
+        InsaneAbilityData data   = CreateAbilitySaveData();
+        int               target = current - max;
+        int               removed = 0;
+
+        for (int i = data.abilities.Count - 1; i >= 2 && removed < target; i--)
+        {
+            InsaneAbilityEntryData entry = data.abilities[i];
+            if (entry != null && !string.IsNullOrEmpty(entry.abilityName))
+            {
+                entry.abilityName             = string.Empty;
+                entry.designatedSpecialtyName = string.Empty;
+                removed++;
+            }
+        }
+
+        ApplyAbilitySaveData(data);
+    }
+
     // ─── 기본 어빌리티 잠금 ──────────────────────────────────
 
     private void LockDefaultAbilitySelections()
