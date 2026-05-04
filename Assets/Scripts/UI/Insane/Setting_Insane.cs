@@ -24,8 +24,8 @@ public class Setting_Insane : Setting
     [SerializeField] private StatControl specialty;
     [SerializeField] private StatControl fear;
     [SerializeField] private StatControl ability;
-    [SerializeField] private Button      applyButton_General;
     [SerializeField] private Button      resetButton_General;
+    [SerializeField] private Button      applyButton_General;
 
     private int pendingLife;
     private int pendingMaxSanity;
@@ -69,6 +69,15 @@ public class Setting_Insane : Setting
     private void OnAbilityPlusClicked()    { pendingMaxAbilityCount++;                                        RefreshGeneralUI(); }
     private void OnAbilityMinusClicked()   { pendingMaxAbilityCount    = Mathf.Max(0, pendingMaxAbilityCount - 1); RefreshGeneralUI(); }
 
+    private void OnApplyGeneralButtonClicked()
+    {
+        ApplyModalController modal = Manager.ApplyModal;
+        if (modal != null)
+            modal.Open("일반 설정 적용", "설정한 수치를 적용하시겠습니까?", OnApplyGeneralClicked);
+        else
+            OnApplyGeneralClicked();
+    }
+
     private void OnApplyGeneralClicked()
     {
         if (insaneManager == null) return;
@@ -100,9 +109,9 @@ public class Setting_Insane : Setting
     [Header("CustomSpecialty")]
     [SerializeField] private TMP_InputField[] areaInputFields  = new TMP_InputField[SpecialtyNameDatabase.ColumnCount];
     [SerializeField] private TMP_InputField[] skillInputFields = new TMP_InputField[SpecialtyNameDatabase.SkillItemCount];
-    [SerializeField] private Button           applyButton;
     [SerializeField] private Button           saveButton;
     [SerializeField] private Button           loadButton;
+    [SerializeField] private Button           applyButton;
 
     private void RefreshPlaceholders()
     {
@@ -125,6 +134,15 @@ public class Setting_Insane : Setting
 
         string[] customSkillNames = insaneManager.GetCurrentCustomSkillNames();
         FillInputFields(skillInputFields, customSkillNames);
+    }
+
+    private void OnApplyCustomSheetButtonClicked()
+    {
+        ApplyModalController modal = Manager.ApplyModal;
+        if (modal != null)
+            modal.Open("커스텀 시트 적용", "특성 이름을 변경하시겠습니까?", OnapplyClicked);
+        else
+            OnapplyClicked();
     }
 
     private void OnapplyClicked()
@@ -215,13 +233,13 @@ public class Setting_Insane : Setting
         AddListener(fear.minusButton,     OnFearMinusClicked);
         AddListener(ability.plusButton,   OnAbilityPlusClicked);
         AddListener(ability.minusButton,  OnAbilityMinusClicked);
-        AddListener(applyButton_General,  OnApplyGeneralClicked);
+        AddListener(applyButton_General,  OnApplyGeneralButtonClicked);
         AddListener(resetButton_General,  OnResetGeneralClicked);
 
         // CustomSpecialty
         RefreshPlaceholders();
         FillCurrentValues();
-        AddListener(applyButton, OnapplyClicked);
+        AddListener(applyButton, OnApplyCustomSheetButtonClicked);
         AddListener(saveButton,  OnSaveClicked);
         AddListener(loadButton,  OnLoadClicked);
     }
@@ -241,11 +259,11 @@ public class Setting_Insane : Setting
         RemoveListener(fear.minusButton,     OnFearMinusClicked);
         RemoveListener(ability.plusButton,   OnAbilityPlusClicked);
         RemoveListener(ability.minusButton,  OnAbilityMinusClicked);
-        RemoveListener(applyButton_General,  OnApplyGeneralClicked);
+        RemoveListener(applyButton_General,  OnApplyGeneralButtonClicked);
         RemoveListener(resetButton_General,  OnResetGeneralClicked);
 
         // CustomSpecialty
-        RemoveListener(applyButton, OnapplyClicked);
+        RemoveListener(applyButton, OnApplyCustomSheetButtonClicked);
         RemoveListener(saveButton,  OnSaveClicked);
         RemoveListener(loadButton,  OnLoadClicked);
     }

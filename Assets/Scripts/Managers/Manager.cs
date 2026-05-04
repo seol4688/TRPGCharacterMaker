@@ -6,7 +6,7 @@ public class Manager : MonoBehaviour
 {
     static Manager Instance;
 
-        DataManager _data = new DataManager();
+    private DataManager _data = new DataManager();
     public static DataManager Data
     {
         get
@@ -48,6 +48,21 @@ public class Manager : MonoBehaviour
             }
 
             return Instance._loadModal;
+        }
+    }
+
+    [SerializeField] private ApplyModalController _applyModal;
+    public static ApplyModalController ApplyModal
+    {
+        get
+        {
+            if (Instance == null)
+            {
+                Debug.LogError("Manager instance is null. Make sure Manager is present in the scene.");
+                return null;
+            }
+
+            return Instance._applyModal;
         }
     }
 

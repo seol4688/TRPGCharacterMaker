@@ -51,6 +51,10 @@ public class InsaneManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fearCountText;
     [SerializeField] private TextMeshProUGUI abilityCountText;
 
+    [Header("Growth")]
+    [Tooltip("성장 창 컴포넌트. 캐릭터 로드 시 공적점·공포심 UI를 자동 갱신합니다.")]
+    [SerializeField] private GrowthWindow growthWindow;
+
     [Header("Modal")]
     [Tooltip("인세인 전용 불러오기 모달")]
     [SerializeField] private LoadModalController_Insane loadModal;
@@ -504,6 +508,8 @@ public class InsaneManager : MonoBehaviour
             ability.SetInsaneManager(this);
             ability.ApplyAbilitySaveData(currentSheet.ability);
         }
+
+        growthWindow?.RefreshUI();
     }
 
     public void SetAbilitySaveData(InsaneAbilityData abilityData)
@@ -638,7 +644,7 @@ public class InsaneManager : MonoBehaviour
         if (fearCountText == null || specialty == null)
             return;
 
-        int remaining = maxFearSpecialtyCount - specialty.FearSpecialtyNames.Count;
+        int remaining = GetTotalFearCount() - specialty.FearSpecialtyNames.Count;
 
         if (remaining <= 0)
         {
@@ -696,9 +702,8 @@ public class InsaneManager : MonoBehaviour
         int weirdSpecialtyCount = specialty != null ? specialty.GetCheckedSpecialtyCountInArea(weirdAreaName) : 0;
         int sanityPenalty       = weirdSpecialtyCount * WeirdAreaSanityPenalty;
 
-        currentSheet.maxLife    = maxLife + abilityLifeBonus;
-        currentSheet.maxSanity  = Mathf.Max(0, maxSanity - sanityPenalty + abilitySanityBonus);
-        currentSheet.meritPoint = meritPoint;
+        currentSheet.maxLife   = maxLife + abilityLifeBonus;
+        currentSheet.maxSanity = Mathf.Max(0, maxSanity - sanityPenalty + abilitySanityBonus);
         UpdateStatTexts();
     }
 
@@ -720,10 +725,21 @@ public class InsaneManager : MonoBehaviour
             specialty.SetCheckedSpecialtyMax(maxCheckedSpecialty + abilitySpecialtyBonus);
     }
 
+    /// <summary>
+    /// Setting의 기본 공포심 수와 Growth의 공포심 증감분을 합산하여 Specialty에 전달합니다.
+    /// </summary>
     private void ApplyFearSpecialtyMax()
     {
         if (specialty != null)
-            specialty.SetFearSpecialtyMax(Mathf.Max(1, maxFearSpecialtyCount));
+            specialty.SetFearSpecialtyMax(Mathf.Max(1, GetTotalFearCount()));
+    }
+
+    /// <summary>Setting 기본값 + Growth 증감분(fearLevel - DefaultFearLevel).</summary>
+    private int GetTotalFearCount()
+    {
+        int growthDelta = (currentSheet?.growth?.fearLevel ?? InsaneGrowthData.DefaultFearLevel)
+                          - InsaneGrowthData.DefaultFearLevel;
+        return maxFearSpecialtyCount + growthDelta;
     }
 
     /// <summary>
@@ -735,9 +751,49 @@ public class InsaneManager : MonoBehaviour
             specialty.SetWrapHorizontally(wrapHorizontally);
     }
 
+    // ─── 성장 데이터 접근자 ───────────────────────────────────
+
+    /// <summary>현재 누적 공적점을 반환합니다.</summary>
+    public int GetMeritPoints()
+    {
+        EnsureCurrentSheet();
+        return currentSheet.growth.meritPoints;
+    }
+
+    /// <summary>공적점을 추가합니다 (음수도 허용).</summary>
+    public void AddMeritPoints(int amount)
+    {
+        EnsureCurrentSheet();
+        currentSheet.growth.meritPoints += amount;
+        UpdateStatTexts();
+    }
+
+    /// <summary>현재 공포심을 반환합니다.</summary>
+    public int GetFearLevel()
+    {
+        EnsureCurrentSheet();
+        return currentSheet.growth.fearLevel;
+    }
+
+    /// <summary>
+    /// 공포심을 delta만큼 변경합니다.
+    /// 결과값은 InsaneGrowthData.MinFearLevel 이상으로 클램프됩니다.
+    /// </summary>
+    public void ChangeFearLevel(int delta)
+    {
+        EnsureCurrentSheet();
+        currentSheet.growth.fearLevel = Mathf.Max(
+            InsaneGrowthData.MinFearLevel,
+            currentSheet.growth.fearLevel + delta);
+
+        ApplyFearSpecialtyMax();
+        UpdateFearCountText();
+    }
+
     private void UpdateStatTexts()
     {
-        profile?.UpdateStatDisplay(currentSheet.maxLife, currentSheet.maxSanity, currentSheet.meritPoint);
+        int totalMeritPoints = meritPoint + (currentSheet?.growth?.meritPoints ?? 0);
+        profile?.UpdateStatDisplay(currentSheet.maxLife, currentSheet.maxSanity, totalMeritPoints);
     }
 
     public void EnsureCurrentSheet()
@@ -774,6 +830,8 @@ public class InsaneManager : MonoBehaviour
             sheet.ability.acquiredAbilityNames.Clear();
             sheet.ability.abilities.Clear();
             EnsureDefaultAbilityData(sheet.ability);
+            sheet.growth.meritPoints = 0;
+            sheet.growth.fearLevel   = InsaneGrowthData.DefaultFearLevel;
             return;
         }
     }
@@ -827,6 +885,16 @@ public class InsaneManager : MonoBehaviour
 
         NormalizeAbilityData(sheet.ability);
 
+        if (sheet.growth == null)
+        {
+            sheet.growth = new InsaneGrowthData();
+        }
+
+        if (sheet.growth.fearLevel < InsaneGrowthData.MinFearLevel)
+        {
+            sheet.growth.fearLevel = InsaneGrowthData.MinFearLevel;
+        }
+
         if (sheet.maxLife <= 0)
         {
             sheet.maxLife = maxLife;
@@ -835,11 +903,6 @@ public class InsaneManager : MonoBehaviour
         if (sheet.maxSanity < 0)
         {
             sheet.maxSanity = maxSanity;
-        }
-
-        if (sheet.meritPoint < 0)
-        {
-            sheet.meritPoint = 0;
         }
 
         for (int i = sheet.item.startingItemNames.Count - 1; i >= 0; i--)
@@ -996,11 +1059,16 @@ public class InsaneManager : MonoBehaviour
                 age = sheet.profile.age,
                 job = sheet.profile.job
             },
-            maxLife = sheet.maxLife,
+            maxLife   = sheet.maxLife,
             maxSanity = sheet.maxSanity,
-            item = CloneItemData(sheet.item),
+            item      = CloneItemData(sheet.item),
             specialty = CloneSpecialtyData(sheet.specialty),
-            ability = CloneAbilityData(sheet.ability)
+            ability   = CloneAbilityData(sheet.ability),
+            growth    = new InsaneGrowthData
+            {
+                meritPoints = sheet.growth.meritPoints,
+                fearLevel   = sheet.growth.fearLevel
+            }
         };
 
         NormalizeCharacterSheet(clone);

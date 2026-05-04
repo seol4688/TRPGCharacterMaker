@@ -7,13 +7,27 @@ using UnityEngine;
 [Serializable]
 public class InsaneCharacterSheet
 {
-    public InsaneProfileData profile = new InsaneProfileData();
+    public InsaneProfileData profile  = new InsaneProfileData();
     public int maxLife;
     public int maxSanity;
-    public int meritPoint;
-    public InsaneItemData item = new InsaneItemData();
+    public InsaneItemData     item     = new InsaneItemData();
     public InsaneSpecialtyData specialty = new InsaneSpecialtyData();
-    public InsaneAbilityData ability = new InsaneAbilityData();
+    public InsaneAbilityData  ability  = new InsaneAbilityData();
+    public InsaneGrowthData   growth   = new InsaneGrowthData();
+}
+
+// ─── 성장 ─────────────────────────────────────────────────────
+
+[Serializable]
+public class InsaneGrowthData
+{
+    public const int MinFearLevel     = 1;
+    public const int DefaultFearLevel = 1;
+
+    /// <summary>누적 공적점.</summary>
+    public int meritPoints = 0;
+    /// <summary>현재 공포심 (최솟값 MinFearLevel).</summary>
+    public int fearLevel   = DefaultFearLevel;
 }
 
 [Serializable]
